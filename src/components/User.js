@@ -1,14 +1,10 @@
 import React from 'react'
+import {Alert} from  'react-bootstrap'
 
 class User extends React.PureComponent {
     render() {
-        console.log("this.props kmj", this.props);
         return (
-            <div className="dialog">
-                <div>
-                    <span>kmj</span>
-                </div>
-            </div>
+            <div class="alert alert-primary" role="alert">To-Do List</div>
         )
     }
 }

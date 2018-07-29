@@ -6,17 +6,16 @@ class SearchItem extends React.PureComponent {
         let input;
         return (
             <div className="dialog">
-                <div>
-                    <h3>Search</h3>
-                    <input type="text" ref={node => input = node} placeholder="搜索" />
-                </div>
-                <div>
-                    <input type="button" value="Search" onClick={() => {
-                        console.log("value is :",input.value)
+
+                <input type="text" className="form-control" placeholder="想说点什么" aria-label="Username"
+                       aria-describedby="basic-addon1" ref={node => input = node} />
+
+
+                <button type="button" className="btn btn-primary" onClick={() => {
                         this.props.search(input.value);
                         input.value = ''
-                    }} />
-                </div>
+                }} >Search</button>
+
             </div>
         )
     }

@@ -4,7 +4,7 @@ import TodoList from '../components/TodoList'
 
 
 const mapStateToProps = state => ({
-    todos: state.todo.text == "" ? state.todo.list: state.todo.list.filter(item => item.content == state.todo.text)
+    todos: state.todo.text == "" ? state.todo.list: state.todo.list.filter(item => item.content.indexOf(state.todo.text)!==-1)
 })
 
 const mapDispatchToProps = dispatch => ({

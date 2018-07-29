@@ -1,32 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import {addTodo, toggleTodo} from '../actions'
-import TodoList from "../components/TodoList";
-
-// const AddTodo = ({ dispatch }) => {
-//     console.log("props ---------- ",dispatch);
-//     let input;
-//     return(
-//         <div className="dialog">
-//             <div>
-//                 <h3>Task</h3>
-//                 <input type="text" ref={node => input = node} placeholder="想说点什么" />
-//             </div>
-//             <div>
-//                 <input type="button" value="Save Task" onClick={() => {
-//                     console.log("value is 11111:",input.value)
-//                     if (!input.value.trim()) {
-//                         return
-//                     }
-//                     console.log("value is :",input.value)
-//                     dispatch(addTodo(input.value))
-//                     input.value = ''
-//                 }} />
-//             </div>
-//         </div>
-//     )
-//
-// }
 
 class AddTodo extends React.PureComponent{
 
@@ -34,20 +8,19 @@ class AddTodo extends React.PureComponent{
         let input;
         return(
             <div className="dialog">
-                <div>
-                    <h3>Task</h3>
-                    <input type="text" ref={node => input = node} placeholder="想说点什么" />
-                </div>
-                <div>
-                    <input type="button" value="Save Task" onClick={() => {
+
+                    <input type="text" className="form-control" placeholder="想说点什么" aria-label="Username"
+                       aria-describedby="basic-addon1" ref={node => input = node} />
+
+                    <button type="button" className="btn btn-primary" onClick={() => {
                         if (!input.value.trim()) {
                             return
                         }
-                        console.log("value is :",input.value)
                         this.props.add(input.value);
                         input.value = ''
-                    }} />
-                </div>
+                    }}>Save Task</button>
+
+
             </div>
         )
     }

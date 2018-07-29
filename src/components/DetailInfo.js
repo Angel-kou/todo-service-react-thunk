@@ -7,13 +7,20 @@ class DetailInfo extends React.PureComponent {
     }
 
     render() {
-
         return (
-            <div className="dialog">
+            <div className="container">
                 <div>
-                    {this.props.location.state.content}
+                <div class="alert alert-primary" role="alert" id="detail">ID</div>
+                <div className="alert alert-primary" role="alert" id="detail">内容</div>
+                <div className="alert alert-primary" role="alert" id="detail">完成情况</div>
+                </div>
+                <div>
+                    <div className="alert alert-secondary" role="alert" id="detail">{this.props.location.state.id}</div>
+                    <div className="alert alert-secondary" role="alert" id="detail">{this.props.location.state.content}</div>
+                    <div className="alert alert-secondary" role="alert" id="detail">{this.props.location.state.completed?"完成":"未完成"}</div>
                 </div>
             </div>
+
         )
     }
 }
