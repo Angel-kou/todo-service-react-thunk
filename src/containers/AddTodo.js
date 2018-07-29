@@ -6,6 +6,10 @@ class AddTodo extends React.PureComponent{
 
     render(){
         let input;
+        {
+            const a=1+2;
+        }
+
         return(
             <div className="dialog">
 
