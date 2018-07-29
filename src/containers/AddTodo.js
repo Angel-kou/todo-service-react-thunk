@@ -20,7 +20,6 @@ class AddTodo extends React.PureComponent{
                         input.value = ''
                     }}>Save Task</button>
 
-
             </div>
         )
     }
