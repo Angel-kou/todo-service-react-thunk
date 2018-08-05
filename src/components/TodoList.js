@@ -3,7 +3,13 @@ import ListItem from './ListItem';
 
 class TodoList extends React.PureComponent {
   componentDidMount() {
-    fetch('/api/todos')
+    fetch('/api/todos', {
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: localStorage.getItem('token')
+      },
+      method: 'GET'
+    })
       .then(data => {
         return data.json();
       })

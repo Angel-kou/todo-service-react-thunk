@@ -1,9 +1,10 @@
 let nextTodoId = 0;
 
-export const addTodo = text => ({
+export const addTodo = (text, content) => ({
   type: 'ADD_TODO',
   id: nextTodoId++,
-  text
+  text,
+  content
 });
 
 export const toggleTodo = id => ({
@@ -30,4 +31,9 @@ export const getToDoList = json => ({
 export const searchTodo = text => ({
   type: 'SEARCH_TO_DO',
   text
+});
+
+export const addTodoTask = json => ({
+  type: 'ADD_TODO_TASK',
+  json
 });

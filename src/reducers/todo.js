@@ -19,7 +19,8 @@ const todo = (state = { list: [], text: '' }, action) => {
             id: action.id,
             content: action.text,
             completed: false,
-            readOnly: true
+            readOnly: true,
+            tasks: []
           }
         ]
       };
@@ -55,6 +56,11 @@ const todo = (state = { list: [], text: '' }, action) => {
         text: action.text
       };
     case 'GET_TODO_LIST':
+      return {
+        ...state,
+        list: action.json
+      };
+    case 'ADD_TODO_TASK':
       return {
         ...state,
         list: action.json

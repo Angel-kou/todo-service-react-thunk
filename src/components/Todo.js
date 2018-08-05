@@ -6,19 +6,15 @@ import User from './User';
 import '../App.css';
 import Login from './Login';
 
-const App = () => (
+const Todo = () => (
   <div className="container">
-    <Login />
+    <User />
+    <div className="action">
+      <AddTodo />
+      <SearchTodo />
+    </div>
+    <ShowTodoList />
   </div>
 );
 
-export default App;
-
-/*
-     <User/>
-     <div className="action">
-         <AddTodo />
-         <SearchTodo/>
-     </div>
-     <ShowTodoList />
-      */
+export default Todo;

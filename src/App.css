@@ -22,7 +22,6 @@
   font-size: large;
 }
 
-
 .container {
   text-align: center;
   margin: 50px 20%;
@@ -39,45 +38,84 @@
   margin-right: 10%;
 }
 
-button{
+button {
   margin-top: 10px;
 }
 
-.action{
+.action {
   display: inline;
 }
 
-#list{
+#list {
   text-align: center;
-  width: 80%;
+  width: 90%;
   margin: 0 20%;
 }
 
-#detail{
+#detail {
   float: left;
   text-align: center;
   width: 33%;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+#basic-addon1 {
+  width: 100px;
 }
 
+#login {
+  text-align: center;
+  width: 400px;
+  margin: 0 auto;
+  background-color: beige;
+}
 
+#block1 {
+  margin-top: 20px;
+}
+
+#block2 {
+  margin-top: 10px;
+}
+
+#register {
+  float: left;
+}
+
+#go {
+  margin-left: 120px;
+  width: 100px;
+}
+
+#alert {
+  margin-top: 20px;
+  height: 50px;
+}
+
+#task {
+  margin-left: 20px;
+}
+
+#taskItem {
+  width: 300px;
+  margin-top: 5px;
+  margin-left: 120px;
+  margin-bottom: -5px;
+}
+
+#taskUl {
+  margin-bottom: 50px;
+  margin-top: 0;
+}
+
+#todoInput {
+  width: 260px;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
