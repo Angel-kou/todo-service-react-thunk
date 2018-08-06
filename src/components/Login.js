@@ -40,7 +40,7 @@ class Login extends React.PureComponent {
             </span>
           </div>
           <input
-            type="text"
+            type="password"
             className="form-control"
             placeholder="please input your password"
             aria-label="Username"
